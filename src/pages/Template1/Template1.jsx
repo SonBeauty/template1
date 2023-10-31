@@ -1,17 +1,11 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, { useRef } from "react";
 import "./template1.css";
 import Elip2 from "../../svg/icons/elip2";
 import Elip3 from "../../svg/icons/Elip3";
 import Elip4 from "../../svg/icons/Elip4";
 import Elip0 from "../../svg/icons/Elip0";
 import Group from "../../svg/icons/Group";
-import {
-  Button,
-  Paper,
-  FormControl,
-  FormControlLabel,
-  FormLabel,
-} from "@material-ui/core";
+import { Button, Paper } from "@material-ui/core";
 import { Toolbox } from "../../component/elements/Toolbox";
 import { Editor, Frame, Element } from "@craftjs/core";
 import { Card, CardBottom, CardTop } from "../../component/elements/Card";
@@ -20,9 +14,10 @@ import { Text } from "../../component/elements/Text";
 import { SettingsPanel } from "../../component/elements/SettingsPanel";
 import IconSvg from "../../component/elements/IconSvg";
 import { handleExport } from "../../ultils/handleExport";
+
 const Template1 = () => {
   const componentRef = useRef(null);
-  const [select, setSelect] = useState(false);
+
   return (
     <>
       <Editor
@@ -114,9 +109,6 @@ const Template1 = () => {
                           </div>
                         </div>
                       </div>
-                      {/* <div class="group-wrapper">
-                      <IconReact />
-                    </div> */}
                       <IconSvg
                         classname="group-wrapper"
                         color="#46c7fb"
