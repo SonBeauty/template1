@@ -1,0 +1,363 @@
+.frame {
+  background-color: #182c4d;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 765px;
+}
+
+.frame .overlap-wrapper {
+  background-color: #182c4d;
+  overflow: hidden;
+  width: 765px;
+  height: 459px;
+}
+
+.frame .overlap {
+  position: relative;
+  width: 1266px;
+  height: 1677px;
+  top: -598px;
+  left: 21px;
+}
+
+.frame .overlap-group {
+  position: absolute;
+  width: 1266px;
+  height: 1677px;
+  top: 0;
+  left: 0;
+}
+
+.frame .ellipse {
+  position: absolute;
+  width: 702px;
+  height: 702px;
+  top: 693px;
+  left: 217px;
+  border-radius: 351.15px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(108.43, 217.81, 58.08, 0.72) 0%,
+    rgba(191.7, 255, 162.56, 0) 100%
+  );
+}
+
+.frame .group {
+  position: absolute;
+  width: 1146px;
+  height: 1677px;
+  top: 0;
+  left: 121px;
+}
+
+.frame .div {
+  position: relative;
+  width: 623px;
+  height: 459px;
+  top: 598px;
+}
+
+.frame .img {
+  position: absolute;
+  width: 558px;
+  height: 459px;
+  top: 0;
+  left: 65px;
+}
+
+.frame .ellipse-2 {
+  position: absolute;
+  width: 579px;
+  height: 459px;
+  top: 0;
+  left: 44px;
+}
+
+.frame .ellipse-3 {
+  position: absolute;
+  width: 615px;
+  height: 459px;
+  top: 0;
+  left: 9px;
+}
+
+.frame .ellipse-4 {
+  position: absolute;
+  width: 623px;
+  height: 459px;
+  top: 0;
+  left: 0;
+}
+
+.frame .iphone-pro-mockup {
+  position: absolute;
+  width: 161px;
+  height: 325px;
+  top: 674px;
+  left: 565px;
+  background-image: url(../../shadow-2.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.frame .main {
+  position: absolute;
+  width: 155px;
+  height: 315px;
+  top: 1px;
+  left: 2px;
+  object-fit: cover;
+}
+
+.frame .main-wrapper {
+  width: 161px;
+  height: 325px;
+  top: 674px;
+  left: 301px;
+  position: absolute;
+  background-image: url(../../shadow.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.frame .img-wrapper {
+  width: 205px;
+  height: 413px;
+  top: 620px;
+  left: 411px;
+  position: absolute;
+  background-image: url(../../shadow.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.frame .main-2 {
+  position: absolute;
+  width: 197px;
+  height: 400px;
+  top: 1px;
+  left: 3px;
+  object-fit: cover;
+}
+
+.frame .group-2 {
+  position: absolute;
+  width: 386px;
+  height: 314px;
+  top: 620px;
+  left: 0;
+}
+
+.frame .overlap-2 {
+  position: absolute;
+  width: 372px;
+  height: 95px;
+  top: 46px;
+  left: 0;
+}
+
+.frame .text-wrapper {
+  position: absolute;
+  width: 372px;
+  top: 0;
+  left: 0;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #6fd64d;
+  font-size: 40.3px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .ecommercego-saas {
+  position: absolute;
+  width: 372px;
+  top: 67px;
+  left: 0;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #6fd64d;
+  font-size: 22.4px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .span {
+  color: #6fd64d;
+}
+
+.frame .text-wrapper-2 {
+  color: #ffffff;
+}
+
+.frame .text-wrapper-3 {
+  position: absolute;
+  width: 128px;
+  top: 145px;
+  left: 0;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 22.4px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .ellipse-5 {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 199px;
+  left: 2px;
+  background-color: #d9d9d9;
+  border-radius: 7.78px;
+}
+
+.frame .ellipse-6 {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 230px;
+  left: 2px;
+  background-color: #d9d9d9;
+  border-radius: 7.78px;
+}
+
+.frame .ellipse-7 {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 264px;
+  left: 2px;
+  background-color: #d9d9d9;
+  border-radius: 7.78px;
+}
+
+.frame .ellipse-8 {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 297px;
+  left: 2px;
+  background-color: #d9d9d9;
+  border-radius: 7.78px;
+}
+
+.frame .text-wrapper-4 {
+  position: absolute;
+  width: 65px;
+  height: 19px;
+  top: 199px;
+  left: 23px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 15.7px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.frame .text-wrapper-5 {
+  width: 65px;
+  top: 229px;
+  position: absolute;
+  height: 19px;
+  left: 23px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 15.7px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.frame .text-wrapper-6 {
+  width: 65px;
+  top: 262px;
+  position: absolute;
+  height: 19px;
+  left: 23px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 15.7px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.frame .text-wrapper-7 {
+  width: 107px;
+  top: 296px;
+  position: absolute;
+  height: 19px;
+  left: 23px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 15.7px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.frame .overlap-group-wrapper {
+  position: absolute;
+  width: 205px;
+  height: 35px;
+  top: 0;
+  left: 0;
+}
+
+.frame .overlap-group-2 {
+  position: relative;
+  width: 203px;
+  height: 35px;
+}
+
+.frame .rectangle {
+  position: absolute;
+  width: 192px;
+  height: 35px;
+  top: 0;
+  left: 0;
+  border-radius: 17.7px 0px 0px 17.7px;
+  background: linear-gradient(180deg, rgb(105, 206, 69) 0%, rgba(105, 206, 69, 0) 100%);
+}
+
+.frame .text-wrapper-8 {
+  position: absolute;
+  width: 178px;
+  height: 29px;
+  top: 3px;
+  left: 25px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 11.2px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .group-wrapper {
+  position: absolute;
+  width: 85px;
+  height: 67px;
+  top: 954px;
+  left: 2px;
+  background-color: #fffefd;
+  border-radius: 13px;
+  padding-top: 9px;
+  padding-left: 18px;
+}
+
+.frame .group-3 {
+  position: absolute;
+  width: 26px;
+  height: 32px;
+  top: 18px;
+  left: 29px;
+}
