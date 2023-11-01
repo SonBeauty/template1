@@ -96,9 +96,21 @@
   height: 325px;
   top: 674px;
   left: 565px;
-  background-image: url(../../shadow-2.png);
-  background-size: cover;
-  background-position: 50% 50%;
+}
+
+.frame .iphone-pro-mockup img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.frame .iphone-pro-mockup .img2 img {
+  position: absolute;
+  top: 15px;
+  left: 14px;
+  width: 132px;
+  height: 303px;
+  border-radius: 20px;
 }
 
 .frame .main {
@@ -116,9 +128,21 @@
   top: 674px;
   left: 301px;
   position: absolute;
-  background-image: url(../../shadow.png);
-  background-size: cover;
-  background-position: 50% 50%;
+}
+
+.frame .main-wrapper img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.frame .main-wrapper .img2 img {
+  position: absolute;
+  width: 131px;
+  height: 303px;
+  top: 10px;
+  left: 15px;
+  border-radius: 20px;
 }
 
 .frame .img-wrapper {
@@ -127,9 +151,21 @@
   top: 620px;
   left: 411px;
   position: absolute;
-  background-image: url(../../shadow.png);
-  background-size: cover;
-  background-position: 50% 50%;
+}
+
+.frame .img-wrapper img  {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.frame .img-wrapper .img2 img {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  height: 384px;
+  width: 165px;
+  border-radius: 22px;
 }
 
 .frame .main-2 {

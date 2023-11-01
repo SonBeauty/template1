@@ -14,10 +14,10 @@ import { Text } from "../../component/elements/Text";
 import { SettingsPanel } from "../../component/elements/SettingsPanel";
 import IconSvg from "../../component/elements/IconSvg";
 import { handleExport } from "../../ultils/handleExport";
+import Mockup from "../../component/elements/Mockup";
 
 const Template1 = () => {
   const componentRef = useRef(null);
-
   return (
     <>
       <Editor
@@ -34,8 +34,9 @@ const Template1 = () => {
           Elip4,
           Group,
           IconSvg,
+          Mockup,
         }}>
-        <div className="flex">
+        <div className="flex gap-4">
           <div class="frame" ref={componentRef}>
             <div class="overlap-wrapper">
               <div class="overlap">
@@ -50,12 +51,13 @@ const Template1 = () => {
                         <Elip4 />
                       </div>
                     </div>
-                    <div class="iphone-pro-mockup">{/* <Elip0 /> */}</div>
-                    <div class="main-wrapper">
-                      <img src="../../shadow.png" alt="" srcset="" />
-                    </div>
-                    <div class="img-wrapper"></div>
-                    <Element is="div" background="rgba(153, 153, 153, 0)">
+                    <Mockup className="iphone-pro-mockup" />
+                    <Mockup className="main-wrapper" />
+                    <Mockup className="img-wrapper" />
+                    <Element
+                      is={Container}
+                      background="rgba(153, 153, 153, 0)"
+                      canvas>
                       <div class="group-2">
                         <div class="overlap-2">
                           <Text
@@ -104,26 +106,36 @@ const Template1 = () => {
                         />
                         <div class="overlap-group-wrapper">
                           <div class="overlap-group-2">
-                            <div class="rectangle"></div>
-                            <div class="text-wrapper-8">BUILT FOR FLUTTER</div>
+                            <div class="rectangle"></div>{" "}
+                            <Text
+                              size="small"
+                              text="BUILT FOR FLUTTER"
+                              className="text-wrapper-8"
+                            />
                           </div>
                         </div>
                       </div>
-                      <IconSvg
-                        classname="group-wrapper"
-                        color="#46c7fb"
-                        icon="IconReact"
-                      />
+                      <Element is={Container} canvas>
+                        <IconSvg
+                          classname="group-wrapper"
+                          color="#46c7fb"
+                          icon="IconReact"
+                        />
+                      </Element>
                     </Element>
                   </div>
                 </Frame>
               </div>
             </div>
           </div>
-          <Paper>
-            <Toolbox />
-            <SettingsPanel />
-          </Paper>
+          <div className="w-[400px]">
+            <div className="center">
+              <Paper>
+                <Toolbox />
+                <SettingsPanel />
+              </Paper>
+            </div>
+          </div>
         </div>
         <Button
           color="primary"

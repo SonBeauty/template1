@@ -117,6 +117,6 @@ Text.craft = {
   },
   props: {
     text: "Hi",
-    fontSize: 20,
+    fontSize: 16,
   },
 };
