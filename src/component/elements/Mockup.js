@@ -30,10 +30,7 @@ const Mockup = ({ className, image }) => {
   }
   console.log(backgroundImage);
   return (
-    <div
-      ref={(ref) => connect(drag(ref))}
-      // style={{ backgroundImage: `${URL.createObjectURL(image)}` }}
-      className={className}>
+    <div ref={(ref) => connect(drag(ref))} className={className}>
       {image && (
         <div className="img2">
           <img src={URL.createObjectURL(image)} alt=""></img>

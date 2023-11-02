@@ -11,7 +11,6 @@ import {
 import { IconReact, IconFlutter, IconLogoCss3 } from "../../svg/icons/IconSVG";
 
 const IconSvg = ({ classname, color, icon }) => {
-  console.log(icon);
   const {
     connectors: { connect, drag },
     hasSelectedNode,
@@ -23,27 +22,31 @@ const IconSvg = ({ classname, color, icon }) => {
   }));
 
   const [editable, setEditable] = useState(false);
-  const [iconSvg, setIconSvg] = useState([]);
 
   useEffect(() => {
     !hasSelectedNode && setEditable(false);
   }, [hasSelectedNode]);
 
-  return icon.map((iconElement) => (
-    <div
-      ref={(ref) => connect(drag(ref))}
-      onClick={(e) => setEditable(true)}
-      className={classname}
-      style={{ color }}>
-      {iconElement === "IconReact" ? (
-        <IconReact />
-      ) : iconElement === "IconFlutter" ? (
-        <IconFlutter />
-      ) : (
-        <IconLogoCss3 />
-      )}
+  return (
+    <div style={{ display: "flex" }}>
+      {icon.map((iconElement) => (
+        <div
+          ref={(ref) => connect(drag(ref))}
+          onClick={(e) => setEditable(true)}
+          className={classname}
+          style={{ color }}>
+          {iconElement === "IconReact" ? (
+            <IconReact />
+          ) : iconElement === "IconFlutter" ? (
+            <IconFlutter />
+          ) : (
+            <IconLogoCss3 />
+          )}
+        </div>
+      ))}
+      ;
     </div>
-  ));
+  );
 };
 
 export default IconSvg;
@@ -56,7 +59,7 @@ const IconSetting = () => {
     Icon: node.data.props.icon,
   }));
 
-  const [selectedOptions, setSelectedOptions] = useState([]);
+  const [selectedOptions, setSelectedOptions] = useState(["IconReact"]);
 
   const handleCheckboxChange = (event) => {
     const value = event.target.value;
@@ -67,8 +70,11 @@ const IconSetting = () => {
         return [...prevSelectedOptions, value];
       }
     });
-    setProp((props) => (props.icon = selectedOptions));
   };
+
+  useEffect(() => {
+    setProp((props) => (props.icon = selectedOptions));
+  }, [selectedOptions]);
 
   return (
     <>

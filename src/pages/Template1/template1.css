@@ -379,7 +379,7 @@
 }
 
 .frame .group-wrapper {
-  position: absolute;
+  position: relative;
   width: 85px;
   height: 67px;
   top: 954px;
@@ -388,6 +388,7 @@
   border-radius: 13px;
   padding-top: 9px;
   padding-left: 18px;
+  margin-left: 10px;
 }
 
 .frame .group-3 {
