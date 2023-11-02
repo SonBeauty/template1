@@ -17,8 +17,6 @@ const VisuallyHiddenInput = styled("input")`
 const Mockup = ({ className, image }) => {
   const {
     connectors: { connect, drag },
-    hasSelectedNode,
-    hasDraggedNode,
     actions: { setProp },
   } = useNode((state) => ({
     hasSelectedNode: state.events.selected,
