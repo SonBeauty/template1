@@ -2,10 +2,8 @@ import { useNode } from "@craftjs/core";
 import React, { useState, useEffect } from "react";
 import {
   FormControl,
-  FormLabel,
   RadioGroup,
   FormControlLabel,
-  Radio,
   Checkbox,
 } from "@material-ui/core";
 import { IconReact, IconFlutter, IconLogoCss3 } from "../../svg/icons/IconSVG";

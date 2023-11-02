@@ -24,11 +24,7 @@ const Mockup = ({ className, image }) => {
     hasSelectedNode: state.events.selected,
     hasDraggedNode: state._hydrationTimestamp.dragged > 0,
   }));
-  let backgroundImage;
-  if (image) {
-    backgroundImage = URL.createObjectURL(image);
-  }
-  console.log(backgroundImage);
+
   return (
     <div ref={(ref) => connect(drag(ref))} className={className}>
       {image && (
@@ -36,7 +32,7 @@ const Mockup = ({ className, image }) => {
           <img src={URL.createObjectURL(image)} alt=""></img>
         </div>
       )}
-      <img src="./icons/iphone15.png" alt="img" />
+      <img src={process.env.PUBLIC_URL + "/iphone15.png"} alt="img" />
     </div>
   );
 };
