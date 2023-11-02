@@ -6,10 +6,12 @@ import {
   RadioGroup,
   FormControlLabel,
   Radio,
+  Checkbox,
 } from "@material-ui/core";
 import { IconReact, IconFlutter, IconLogoCss3 } from "../../svg/icons/IconSVG";
 
 const IconSvg = ({ classname, color, icon }) => {
+  console.log(icon);
   const {
     connectors: { connect, drag },
     hasSelectedNode,
@@ -21,27 +23,27 @@ const IconSvg = ({ classname, color, icon }) => {
   }));
 
   const [editable, setEditable] = useState(false);
-  const [iconSvg, setIconSvg] = useState(<IconReact />);
-  console.log(icon);
+  const [iconSvg, setIconSvg] = useState([]);
+
   useEffect(() => {
     !hasSelectedNode && setEditable(false);
   }, [hasSelectedNode]);
-  useEffect(() => {
-    icon === "IconReact"
-      ? setIconSvg(<IconReact />)
-      : icon === "IconFlutter"
-      ? setIconSvg(<IconFlutter />)
-      : setIconSvg(<IconLogoCss3 />);
-  }, [icon]);
-  return (
+
+  return icon.map((iconElement) => (
     <div
       ref={(ref) => connect(drag(ref))}
       onClick={(e) => setEditable(true)}
       className={classname}
       style={{ color }}>
-      {iconSvg}
+      {iconElement === "IconReact" ? (
+        <IconReact />
+      ) : iconElement === "IconFlutter" ? (
+        <IconFlutter />
+      ) : (
+        <IconLogoCss3 />
+      )}
     </div>
-  );
+  ));
 };
 
 export default IconSvg;
@@ -54,27 +56,56 @@ const IconSetting = () => {
     Icon: node.data.props.icon,
   }));
 
-  console.log(Icon);
+  const [selectedOptions, setSelectedOptions] = useState([]);
+
+  const handleCheckboxChange = (event) => {
+    const value = event.target.value;
+    setSelectedOptions((prevSelectedOptions) => {
+      if (prevSelectedOptions.includes(value)) {
+        return prevSelectedOptions.filter((option) => option !== value);
+      } else {
+        return [...prevSelectedOptions, value];
+      }
+    });
+    setProp((props) => (props.icon = selectedOptions));
+  };
+
   return (
     <>
       <FormControl>
-        <RadioGroup
-          defaultValue={Icon || <IconReact />}
-          onChange={(_, e) => setProp((props) => (props.icon = e))}>
+        <RadioGroup defaultValue={Icon || <IconReact />}>
           <FormControlLabel
             label="React"
             value="IconReact"
-            control={<Radio value="IconReact" />}
+            control={
+              <Checkbox
+                checked={selectedOptions.includes("IconReact")}
+                onChange={handleCheckboxChange}
+                value="IconReact"
+              />
+            }
           />
           <FormControlLabel
             label="Flutter"
             value="IconFlutter"
-            control={<Radio value="IconFlutter" />}
+            control={
+              <Checkbox
+                checked={selectedOptions.includes("IconFlutter")}
+                onChange={handleCheckboxChange}
+                value="IconFlutter"
+              />
+            }
           />
           <FormControlLabel
             label="CSS"
             value="IconLogoCss3"
-            control={<Radio value="IconLogoCss3" />}
+            control={
+              <Checkbox
+                checked={selectedOptions.includes("IconLogoCss3")}
+                onChange={handleCheckboxChange}
+                value="IconLogoCss3"
+              />
+            }
           />
         </RadioGroup>
       </FormControl>

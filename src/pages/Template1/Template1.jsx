@@ -119,7 +119,7 @@ const Template1 = () => {
                         <IconSvg
                           classname="group-wrapper"
                           color="#46c7fb"
-                          icon="IconReact"
+                          icon={["IconReact"]}
                         />
                       </Element>
                     </Element>
